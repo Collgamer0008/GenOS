@@ -3,13 +3,13 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "genos"
+name = "genux"
 version = "0.1.0"
 description = "Multi-Agent Linux Command Execution System"
 readme = "README.md"
 license = { file = "LICENSE" }
 authors = [
-    { name = "Ashwin <ashwinkulkarni737@gmail.com>" }
+    { name = "Ashwin", email = "ashwinkulkarni737@gmail.com" }
 ]
 requires-python = ">=3.9"
 dependencies = [
@@ -21,5 +21,3 @@ dependencies = [
 
 [project.scripts]
 genos = "genos.main:main"
-
-
