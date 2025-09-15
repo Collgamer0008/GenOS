@@ -45,7 +45,7 @@ jobs:
   publish-pypi:
     name: Publish to PyPI
     runs-on: ubuntu-latest
-    needs: publish-testpypi
+    needs: test
     if: always()
 
     steps:
