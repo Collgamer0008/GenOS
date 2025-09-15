@@ -9,15 +9,17 @@ description = "Multi-Agent Linux Command Execution System"
 readme = "README.md"
 license = { file = "LICENSE" }
 authors = [
-    { name = "Your Name", email = "your@email.com" }
+    { name = "Ashwin <ashwinkulkarni737@gmail.com>" }
 ]
 requires-python = ">=3.9"
 dependencies = [
-    "langchain",
-    "langchain-groq",
-    "langchain-community",
-    "tavily-python",
+    "langchain>=0.2.0",
+    "langchain-groq>=0.1.0",
+    "langchain-community>=0.2.0",
+    "tavily-python>=0.3.0",
 ]
 
 [project.scripts]
 genos = "genos.main:main"
+
+
