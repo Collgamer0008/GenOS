@@ -9,20 +9,21 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 
 def main():
     """Main CLI entrypoint for genos"""
-    groq_api_key = os.environ.get("GROQ_API_KEY")
-    if not groq_api_key:
+    # Set API keys in environment if not present
+    if not os.environ.get("GROQ_API_KEY"):
         groq_api_key = input("Enter your GROQ API Key: ").strip()
         if not groq_api_key:
             print("❌ GROQ API Key is required. Exiting.")
             return
+        os.environ["GROQ_API_KEY"] = groq_api_key  
 
-    # Get Tavily API key
-    tavily_api_key = os.environ.get("TAVILY_API_KEY")
-    if not tavily_api_key:
+    if not os.environ.get("TAVILY_API_KEY"):
         tavily_api_key = input("Enter your Tavily API Key: ").strip()
         if not tavily_api_key:
             print("❌ Tavily API Key is required. Exiting.")
             return
+        os.environ["TAVILY_API_KEY"] = tavily_api_key  
+
 
     # Initialize LLM + tools
     llm = ChatGroq(
