@@ -4,7 +4,8 @@ import os
 from .orchestrator import MultiAgentOrchestrator
 from .utils import get_multiline_input
 from langchain_groq import ChatGroq
-from langchain_community.tools.tavily_search import TavilySearchResults
+from langchain_tavily import TavilySearch
+import pyfiglet
 
 
 def main():
@@ -32,14 +33,16 @@ def main():
         temperature=0.3,
     )
 
-    tavily_search = TavilySearchResults(
-        api_key=os.environ.get("TAVILY_API_KEY"),
+    tavily_search = TavilySearch(
+        api_key=os.environ["TAVILY_API_KEY"],
         max_results=10,
     )
 
+
     orchestrator = MultiAgentOrchestrator(llm, tavily_search)
 
-    print("🎯 Welcome to the Multi-Agent Linux Command System!")
+    banner = pyfiglet.figlet_format("Genux", font="slant")
+    print(banner)
     print("Choose an input method:")
     print("1) Single line text input")
     print("2) Multi-line text input")

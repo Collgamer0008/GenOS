@@ -2,10 +2,16 @@
 langchain>=0.1.0
 langchain-groq>=0.1.0
 langchain-community>=0.0.20
+langchain-tavily>=0.2.11
 
 # AI/ML and API integrations
 groq>=0.4.0
 tavily-python>=0.3.0
+
+
+#for stylized fonts 
+pyfiglet>=0.8.0
+
 
 # Utility libraries (already used in your code)
 # Note: json, os, re, subprocess, typing are part of Python standard library
