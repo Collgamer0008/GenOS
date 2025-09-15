@@ -10,7 +10,7 @@ tavily-python>=0.3.0
 
 
 #for stylized fonts 
-pyfiglet>=0.8.0
+pyfiglet>=1.0.4
 
 
 # Utility libraries (already used in your code)
