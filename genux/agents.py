@@ -50,7 +50,7 @@ class ComprehendAgent:
         search_decision = self.llm.invoke(search_prompt).content.strip()
         
         search_results = ""
-        print(search_decision)
+        # print(search_decision)
         if search_decision != "NO_SEARCH_NEEDED":
 
             try:
@@ -64,7 +64,7 @@ class ComprehendAgent:
         You are a Linux system comprehension agent. Analyze this user request and provide a structured understanding.
         
         User Request: "{user_input}"
-        {search_results}
+        search results(if search used) : {search_results}
         
         Provide a JSON response with:
         {{
